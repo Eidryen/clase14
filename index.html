@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Sorteo de Nombres</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #ff5722;
+        }
+        .btn {
+            background-color: #ff5722;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #e64a19;
+        }
+        .list-group-item {
+            border: 1px solid #ff5722;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            padding: 10px;
+            background-color: #fff;
+            color: #ff5722;
+        }
+        .alert-info {
+            background-color: #ffebee;
+            color: #d32f2f;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Sorteo de Nombres</h1>
+        <div class="mt-4">
+            <h3>Agregar Nombres a la Lista</h3>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa un nombre">
+            </div>
+            <button class="btn" onclick="agregarNombre()">Agregar a la Lista</button>
+            <div class="mt-3">
+                <h5>Lista de Nombres</h5>
+                <ul id="listaNombres" class="list-group"></ul>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <button class="btn" onclick="sortear()">Sortear</button>
+            <div class="mt-3">
+                <h5>Nombre Ganador</h5>
+                <p id="nombreGanador" class="alert alert-info"></p>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
